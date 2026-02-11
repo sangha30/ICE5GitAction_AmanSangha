@@ -1,6 +1,6 @@
 ## YAML Template.
 ---
-name: Multi-Platform Workflow1
+name: Multi-Platform Workflow2
 
 on:
   pull_request:
