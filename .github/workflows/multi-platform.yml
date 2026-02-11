@@ -1,11 +1,11 @@
 ## YAML Template.
 ---
-name: Multi-Platform Workflow1
+name: Multi-Platform Workflow3
 
 on:
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   ubuntu-job:
