@@ -1,0 +1,41 @@
+## YAML Template.
+---
+name: Dependent Jobs Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Initialize Build Environment
+        run: echo "Preparing to build..."
+      - name: Build Application
+        run: |
+          echo "Building application..."
+          sleep 5
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Load Build Artifacts
+        run: echo "Loading files for testing..."
+      - name: Run Testing Suite
+        run: |
+          echo "Running tests..."
+          sleep 5
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Authorize Deployment
+        run: echo "Verifying credentials..."
+      - name: Deploy to Production
+        run: |
+          echo "Deploying application..."
+          sleep 5
