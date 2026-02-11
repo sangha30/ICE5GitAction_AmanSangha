@@ -3,6 +3,10 @@
 name: Dependent Jobs Workflow 
 
 on:
+  workflow_dispatch: 
+  release:
+    types: [created]
+    
   push:
     branches:
       - main
