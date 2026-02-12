@@ -1,6 +1,6 @@
 ## YAML Template.
 ---
-name: Dependent Jobs Workflow1
+name: Dependent Jobs Workflow1 
 
 on:
   push:
