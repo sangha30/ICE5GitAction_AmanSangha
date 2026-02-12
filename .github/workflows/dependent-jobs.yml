@@ -3,13 +3,9 @@
 name: Dependent Jobs Workflow1
 
 on:
-  workflow_dispatch: 
-  release:
-    types: [created]
-    
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
